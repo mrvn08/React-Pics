@@ -3,10 +3,11 @@ import React from 'react';
 class SearchBar extends React.Component{
     state = {searchText: ''}
 
-    onFormSubmit(event){
+    onFormSubmit = (event) => {
         event.preventDefault();
+        console.log(this.state.searchText);
     }
-    
+
     render(){
         return (
             <div className="ui segment">
@@ -17,7 +18,9 @@ class SearchBar extends React.Component{
                             <input 
                                 type="text" 
                                 value={this.state.searchText} 
-                                onChange={(e) => this.setState({searchText: e.target.value})} placeholder="Search..."/>
+                                onChange={(e) => this.setState({searchText: e.target.value})} 
+                                placeholder="Search..."
+                            />
                         </div>
                     </div>
                 </form>    
