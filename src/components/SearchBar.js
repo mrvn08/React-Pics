@@ -5,6 +5,10 @@ class SearchBar extends React.Component{
 
     onFormSubmit = (event) => {
         event.preventDefault();
+        
+        this.props.onSubmit(this.state.searchText);
+        
+        //Use arrow functions to fix context issues regarding 'this' 
         console.log(this.state.searchText);
     }
 
