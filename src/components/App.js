@@ -16,7 +16,7 @@ export default class App extends React.Component {
         return (
             <div className="ui container" style={{marginTop: '20px'}}>
                 <SearchBar onSubmit={this.onFormSubmit}/>
-                <ImageList/>
+                <ImageList images={this.state.images}/>
             </div>
         );
     }
