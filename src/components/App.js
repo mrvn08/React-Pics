@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from axios;
+import axios from 'axios';
 import SearchBar from './SearchBar';
 
 export default class App extends React.Component {
@@ -9,6 +9,8 @@ export default class App extends React.Component {
             headers:{
                 Authorization: 'Client-ID d31b43a1633960d67bb432532b56689d873bd74e2f55d95c2d5925c8dbd4bd7f'
             }
+        }).then((response) => {
+            console.log(response.data.results);
         });
     }
 
